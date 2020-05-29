@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     public Animator animator;
     private bool estaBajada;
     private AudioSource sound;
+    private int numeroLLaves;
     private void Start()
     {
         sound = GetComponent<AudioSource>();
@@ -14,21 +15,26 @@ public class Door : MonoBehaviour
         animator.SetBool("EstaBajada", estaBajada);
         
     }
+    private void Update()
+    {
+        numeroLLaves = Player.numeroLLaves;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && numeroLLaves==1)
         {
             estaBajada = !estaBajada;
             animator.SetBool("EstaBajada", estaBajada);
             Debug.Log("entre");
+            Debug.Log("Numero de Llaves"+numeroLLaves);
             sound.Play();
         }
        
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && numeroLLaves == 1)
         {
             estaBajada = !estaBajada;
             animator.SetBool("EstaBajada", estaBajada);

@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+
 public class Player : MonoBehaviour
 {
     public Transform target;
     private NavMeshAgent agen;
+    public static int numeroLLaves;
     // Start is called before the first frame update
     void Start()
     {
+        numeroLLaves = 0;
         agen = GetComponent<NavMeshAgent>();
         //agen.SetDestination(target.position);
     }
@@ -18,7 +21,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
             Vector3 porsicionRaton = Input.mousePosition;
@@ -33,4 +36,15 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "key")
+        {
+            numeroLLaves++;
+            Debug.Log(numeroLLaves);
+            Destroy(other.gameObject);
+        }
+    }
 }
+

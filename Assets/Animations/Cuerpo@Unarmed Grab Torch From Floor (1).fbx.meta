@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01147d9012062a943a7dd24e67716834
+guid: f96d07089afda634fb4248d790f57c46
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Jump
+      name: Unarmed Grab Torch From Floor (1)
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 78
+      lastFrame: 115
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

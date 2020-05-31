@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 
 public class Player : MonoBehaviour
 {
-    public Transform target;
     private NavMeshAgent agen;
     public static int numeroLLaves;
+    public Text textNumeroLlaves;
+    private Animator animacion;
     // Start is called before the first frame update
     void Start()
     {
         numeroLLaves = 0;
+        animacion = GetComponent<Animator>();
         agen = GetComponent<NavMeshAgent>();
         //agen.SetDestination(target.position);
     }
@@ -42,7 +45,8 @@ public class Player : MonoBehaviour
         if(other.tag == "key")
         {
             numeroLLaves++;
-            Debug.Log(numeroLLaves);
+            textNumeroLlaves.text = "LLaves: " + numeroLLaves.ToString();
+            animacion.SetTrigger("PickUp");
             Destroy(other.gameObject);
         }
     }

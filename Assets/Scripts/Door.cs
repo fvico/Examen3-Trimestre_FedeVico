@@ -6,11 +6,11 @@ public class Door : MonoBehaviour
 {
     public Animator animator;
     private bool estaBajada;
-    private AudioSource sound;
     private int numeroLLaves;
+    public Sound sonido;
     private void Start()
     {
-        sound = GetComponent<AudioSource>();
+       
         estaBajada = false;
         animator.SetBool("EstaBajada", estaBajada);
         
@@ -28,7 +28,9 @@ public class Door : MonoBehaviour
             animator.SetBool("EstaBajada", estaBajada);
             Debug.Log("entre");
             Debug.Log("Numero de Llaves"+numeroLLaves);
-            sound.Play();
+            sonido.reproductor.clip = sonido.puerta;
+            sonido.reproductor.Play();
+
         }
        
     }
@@ -39,7 +41,8 @@ public class Door : MonoBehaviour
             estaBajada = !estaBajada;
             animator.SetBool("EstaBajada", estaBajada);
             Debug.Log("sali");
-            sound.Play();
+            sonido.reproductor.clip = sonido.puerta;
+            sonido.reproductor.Play();
         }
         
     }

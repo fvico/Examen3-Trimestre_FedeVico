@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public static int numeroLLaves;
     public Text textNumeroLlaves;
     private Animator animacion;
+    public Sound sonido;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +49,8 @@ public class Player : MonoBehaviour
             textNumeroLlaves.text = "LLaves: " + numeroLLaves.ToString();
             animacion.SetTrigger("PickUp");
             Destroy(other.gameObject);
+            sonido.reproductor.clip = sonido.llave;
+            sonido.reproductor.Play();
         }
     }
 }

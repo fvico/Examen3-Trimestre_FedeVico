@@ -7,6 +7,7 @@ TagManager:
   - key
   - Enemigo
   - bullet
+  - LimiteEnemigo
   layers:
   - Default
   - TransparentFX

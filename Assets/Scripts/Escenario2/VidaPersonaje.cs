@@ -5,12 +5,20 @@ using UnityEngine;
 public class VidaPersonaje : MonoBehaviour
 {
     [SerializeField]int vida;
+    public GameManager gameManager;
 
+    private void Update()
+    {
+        if (vida <= 0)
+        {
+            gameManager.GameOver();
+        }
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "bullet")
         {
-            Debug.Log("dañado");
+            vida = vida - 25;
         }
     }
 }

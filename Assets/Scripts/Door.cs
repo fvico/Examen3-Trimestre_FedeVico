@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
             animator.SetBool("EstaBajada", estaBajada);
             Debug.Log("entre");
             Debug.Log("Numero de Llaves"+numeroLLaves);
-            sonido.reproductor.clip = sonido.puerta;
+            sonido.reproductor.clip = sonido.listaSonidos[0];
             sonido.reproductor.Play();
 
         }
@@ -41,7 +41,7 @@ public class Door : MonoBehaviour
             estaBajada = !estaBajada;
             animator.SetBool("EstaBajada", estaBajada);
             Debug.Log("sali");
-            sonido.reproductor.clip = sonido.puerta;
+            sonido.reproductor.clip = sonido.listaSonidos[0];
             sonido.reproductor.Play();
         }
         

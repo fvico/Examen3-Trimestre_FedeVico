@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
             textNumeroLlaves.text = "LLaves: " + numeroLLaves.ToString();
             animacion.SetTrigger("PickUp");
             Destroy(other.gameObject);
-            sonido.reproductor.clip = sonido.llave;
+            sonido.reproductor.clip = sonido.listaSonidos[1];
             sonido.reproductor.Play();
         }
     }

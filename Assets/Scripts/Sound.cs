@@ -5,8 +5,7 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
     public static Sound sonido;
-    public AudioClip puerta;
-    public AudioClip llave;
+    public List<AudioClip> listaSonidos; 
     public AudioSource reproductor;
 
     private void Start()

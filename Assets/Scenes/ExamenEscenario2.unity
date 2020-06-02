@@ -312,6 +312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 300184739}
+  - {fileID: 425235439}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -93.935005, z: 0}
@@ -562,6 +563,36 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dc30d0f173c2c674091d33a2f0b74d1f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8f690d665cf7be4d8b521ba560a27bb, type: 3}
+--- !u!1 &425235438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 425235439}
+  m_Layer: 0
+  m_Name: SpawnSmoke
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &425235439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425235438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.653, y: -0.629, z: 1.088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 351975600}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &460224679
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,9 +720,9 @@ RectTransform:
   m_Father: {fileID: 1072279089}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -393.14, y: 223.88}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 133, y: -40}
   m_SizeDelta: {x: 229.72998, y: 34.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467198200
@@ -1307,7 +1338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -114.86, y: 17.12}
+  m_AnchoredPosition: {x: -124, y: 31}
   m_SizeDelta: {x: 229.72998, y: 34.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217790573
@@ -1770,6 +1801,9 @@ MonoBehaviour:
   prefabBlood: {fileID: 2889578405066002616, guid: 60d5dd6afada1644b82617367b58238f,
     type: 3}
   spawnBlood: {fileID: 969974784}
+  prefabSmoke: {fileID: 1473176125891501284, guid: 9c3b1956ceaa7cd4293ec4239421d5ee,
+    type: 3}
+  spawnSmoke: {fileID: 425235439}
 --- !u!1 &1719999361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,7 +2359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa8e1f0f7b233e468d2366504b1f11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 50
+  vidaMaxima: 400
   gameManager: {fileID: 506660757}
   spawnerEnemigo: {fileID: 1719999361}
   vidaEnemigo: {fileID: 1217790573}

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Disparo : MonoBehaviour
 {
-   public AudioSource sonidoEnemigo;
-   public GameObject prefabBlood;
-    public GameObject spawnBlood;
+       public AudioSource sonidoEnemigo;
+       public GameObject prefabBlood;
+       public GameObject spawnBlood;
+       public GameObject prefabSmoke;
+       public Transform spawnSmoke;
     private void Start()
     {
         Debug.Log("Actual vida: " + VidaEnemigo.currentVida);
@@ -19,13 +21,13 @@ public class Disparo : MonoBehaviour
         sonidoEnemigo.Play();
     }
 
-
     void Shott()
     {
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Instantiate(prefabSmoke, spawnSmoke.position, Quaternion.identity);
 
             if (Physics.Raycast(ray, out hit, 100))
             {
@@ -46,4 +48,5 @@ public class Disparo : MonoBehaviour
     {
         Instantiate(prefabBlood, spawnBlood.transform.position,Quaternion.identity);
     }
+
 }

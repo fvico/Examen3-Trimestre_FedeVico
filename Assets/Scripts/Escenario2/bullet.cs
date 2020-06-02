@@ -20,6 +20,4 @@ public class bullet : MonoBehaviour
     {
         rgb.velocity = new Vector3(rgb.velocity.x, rgb.velocity.y, speed );
     }
-
-
 }

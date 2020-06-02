@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Disparo : MonoBehaviour
 {
+   public AudioSource sonidoEnemigo;
+   public GameObject prefabBlood;
+    public GameObject spawnBlood;
     private void Start()
     {
         Debug.Log("Actual vida: " + VidaEnemigo.currentVida);
+        sonidoEnemigo = GetComponent<AudioSource>();
+       
     }
     private void Update()
     {
         Shott();
+        sonidoEnemigo.Play();
     }
+
 
     void Shott()
     {
@@ -24,13 +31,19 @@ public class Disparo : MonoBehaviour
             {
                 if(hit.collider.gameObject.tag == "Enemigo")
                 {
-                    //currenteVidaEnemigo = currenteVidaEnemigo -1;
-                    //VidaEnemigo.currentVida = currenteVidaEnemigo;
                     VidaEnemigo.currentVida = VidaEnemigo.currentVida - 1;
                     Debug.Log("ActualVida " + VidaEnemigo.currentVida);
+                    Sound.sonido.reproductor.clip = Sound.sonido.listaSonidos[0];
+                    Sound.sonido.reproductor.Play();
+                    InvocarSangre();
                 }
             }
             Debug.DrawRay(ray.origin, ray.direction * 100, Color.blue, Mathf.Infinity);
         }
+    }
+
+   public void InvocarSangre()
+    {
+        Instantiate(prefabBlood, spawnBlood.transform.position,Quaternion.identity);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VidaEnemigo : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class VidaEnemigo : MonoBehaviour
     public static int currentVida;
     public GameManager gameManager;
     public GameObject spawnerEnemigo;
+    public Text vidaEnemigo;
+
 
 
     private void Start()
@@ -19,11 +22,14 @@ public class VidaEnemigo : MonoBehaviour
     }
     private void Update()
     {
+        vidaEnemigo.text = "Vida Enemigo: " + currentVida.ToString();
         if (currentVida <= 0)
         {
+            currentVida = 0;
             gameManager.Winner();
             Destroy(spawnerEnemigo);
 
         }
+
     }
 }

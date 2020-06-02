@@ -42,20 +42,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2137763
   m_Center: {x: 0, y: -0.07621747, z: -0.119440906}
---- !u!114 &988626253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906672304896122038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caad54eacecd58f48a291a00fd8e69c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: -9.36
-  lifeBullet: 1.96
 --- !u!82 &2792033437387994438
 AudioSource:
   m_ObjectHideFlags: 0
@@ -68,7 +54,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ad0c9a90422d35d43bcb33131d4fb2f8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.115
+  m_Volume: 0.344
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -152,6 +138,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &988626253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906672304896122038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caad54eacecd58f48a291a00fd8e69c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -9.36
+  lifeBullet: 1.96
 --- !u!1001 &1905449877826986428
 PrefabInstance:
   m_ObjectHideFlags: 0

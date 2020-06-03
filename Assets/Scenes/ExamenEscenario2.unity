@@ -2591,7 +2591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa8e1f0f7b233e468d2366504b1f11b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMaxima: 50
+  vidaMaxima: 400
   gameManager: {fileID: 506660757}
   spawnerEnemigo: {fileID: 1719999361}
   vidaEnemigo: {fileID: 1217790573}

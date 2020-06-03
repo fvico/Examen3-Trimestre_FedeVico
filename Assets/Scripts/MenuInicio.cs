@@ -30,5 +30,10 @@ public class MenuInicio : MonoBehaviour
         SceneManager.LoadScene("Menu");
         Debug.Log("pincho");
     }
+
+   public void Salir()
+    {
+        Application.Quit();
+    }
 }
 
